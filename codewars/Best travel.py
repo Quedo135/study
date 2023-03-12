@@ -31,4 +31,5 @@ def choose_best_sum(s, n, v):
 v = [340, 500, 640, 732, 890, 1000, 1230, 1230, 1320, 1346, 1440, 2333]
 s = 2300
 n = 4
-print(choose_best_sum(s, n, v))
+print(choose_best_sum(s, n, v))  
+print(choose_best_sum(s, n, v)) 
