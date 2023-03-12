@@ -11,13 +11,3 @@ def snail(s):
     res = s[0] + [s[j][-1] for j in range(1, n)] + s[-1][-2::-1] + [s[-j][0] for j in range(2, n)]
     res += snail([s[j][1:-1] for j in range(1, n-1)])
     return res
-
-
-
-
-array = [[1,2,3],
-         [4,5,6],
-         [7,8,9]]
-
-print(snail(array))
-
