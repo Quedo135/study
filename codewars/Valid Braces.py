@@ -16,7 +16,5 @@ def valid_braces(string):
             
     return False if a else True
 
-
 aa = "{}()[]"
-
 print(valid_braces(aa))
