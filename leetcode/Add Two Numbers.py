@@ -11,18 +11,27 @@ class Solution(object):
         :rtype: ListNode
         """
 
-        a, b = [], []
+        a, b, res = [], [], []
         while l1:
             a.append(l1.val)
             l1 = l1.next         
         while l2:
             b.append(l2.val)
             l2 = l2.next         
-        while  :
-                                
+        s = 0
+        while a or b :
+            s = a.pop() + b.pop() + next_digit
+            next_digit = s//10
+            res.append(s%10)
+        if next_digit: 
+            res.append(next_digit)
+        print(res)
+        return res
+            
 
 
-        res = sum( for i in range())        
+
+
         
 
         # [ 1->4->5, 1->3->4, 2->6 ]

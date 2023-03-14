@@ -1,14 +1,26 @@
-import numpy as np
-
-
-def exp_sum(n):
-    F = np.zeros((n+1, n+1), dtype=int)
-    F[0,:] = 1
-    for i in range(1, n+1):
-        for j in range(1, n+1):
-            F[i,j] = F[i, j-1] if j>i else F[i-j,j] + F[i, j-1]
-    print(F)
-    return F[n,n]
+def solve_runes(runes):
+    runes_mod = runes.replace('=-', '+')
+    runes_mod = runes_mod.replace('=', '-')
+    runes_mod = runes_mod.replace('*-', '*(-1)*')
+    runes_mod = runes_mod.replace('--', '+')
     
-n = 3
-print(exp_sum(n))
+    for d in '123456789':
+        txt = runes_mod.replace('?', d)
+        if eval(txt) == 0:
+            return int(d)
+    for i in range(len(runes_mod)):
+        if runes_mod[i] =='?':
+            if i == 0:
+                runes_mod = runes_mod[1:]
+            elif runes_mod[i-1] not in '+-*':
+                
+        
+        
+        elif ('?0' in runes or '??' in runes ) and d == '0' or d in runes:
+            continue
+    return -1
+
+a = '?878+-663-?2?5'
+eval(a)
+
+
